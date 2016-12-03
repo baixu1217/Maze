@@ -104,15 +104,16 @@ void GetMazePath(int *maze,size_t n,Pos entry,stack<Pos>& s)
 	}
 }
 
-//µ›πÈ
+//µ›πÈ«ÛΩ‚√‘π¨¬∑æ∂
 void GetMazePath(int *maze,size_t n,Pos entry,stack<Pos>& s)
 {
 		Pos next = entry;
 		maze[next._row*n+next._col] = 2;
 		s.push(entry);
-	
+		
 		if(next._row == n-1)
 		{
+			s.pop();
 			return;
 		}
 
